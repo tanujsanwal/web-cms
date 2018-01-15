@@ -1,7 +1,7 @@
 (function (window, angular) {
 	'use strict';
 
-		var filePath = 'web-cms/dist/views/';
+		var filePath = '/dist/views/';
 	var cmsWebApp = angular.module('web-cms',[
 		'ui.router',
 		'login.controllers',
@@ -155,6 +155,31 @@
 
 	}]);
 }(window,angular));
+(function (window, angular) {
+	var webAppService = angular.module('webApp.service', [])
+	webAppService.factory("localStorage",['$window',function($window){
+		return {
+			getCurrentUser:function(){
+				var data = $window.localStorage.getItem('currentUser') ? JSON.parse($window.localStorage.getItem('currentUser')) :{};
+				return data;
+			},
+			setCurrentUser:function(user){
+				var data = JSON.stringify(user);
+				$window.localStorage.setItem('currentUser',data);
+			},
+			getUserData:function(){
+				var data = JSON.parse($window.localStorage.getItem('userData'));
+				return data;
+			},
+			setUserData:function(user){
+				var data = $window.localStorage.getItem('userData') ? JSON.parse($window.localStorage.getItem('userData')):[];
+				data.push(user);
+				data = JSON.stringify(data);
+				$window.localStorage.setItem('userData',data);
+			}
+		};
+	}])
+}(window, angular));
 (function (window,angular) {
 	var webAppDirective = angular.module('webApp.directive', [])
 	webAppDirective.directive("dragDropTemplate",function(){
@@ -212,28 +237,3 @@
 		}
 	})
 }(window,angular));
-(function (window, angular) {
-	var webAppService = angular.module('webApp.service', [])
-	webAppService.factory("localStorage",['$window',function($window){
-		return {
-			getCurrentUser:function(){
-				var data = $window.localStorage.getItem('currentUser') ? JSON.parse($window.localStorage.getItem('currentUser')) :{};
-				return data;
-			},
-			setCurrentUser:function(user){
-				var data = JSON.stringify(user);
-				$window.localStorage.setItem('currentUser',data);
-			},
-			getUserData:function(){
-				var data = JSON.parse($window.localStorage.getItem('userData'));
-				return data;
-			},
-			setUserData:function(user){
-				var data = $window.localStorage.getItem('userData') ? JSON.parse($window.localStorage.getItem('userData')):[];
-				data.push(user);
-				data = JSON.stringify(data);
-				$window.localStorage.setItem('userData',data);
-			}
-		};
-	}])
-}(window, angular));
