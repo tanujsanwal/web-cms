@@ -1,7 +1,7 @@
 (function (window, angular) {
 	'use strict';
 	
-	var filePath = '/dist/views/';
+	var filePath = 'dist/views/';
 	var cmsWebApp = angular.module('web-cms',[
 		'ui.router',
 		'login.controllers',
