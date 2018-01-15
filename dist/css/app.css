@@ -1,0 +1,85 @@
+.bg-img {
+  background: url(https://images.pexels.com/photos/326240/pexels-photo-326240.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) no-repeat center center fixed transparent;
+  height: 100vh;
+  background-size: cover; }
+  .bg-img .card-bg-color {
+    background-color: #fdfdfd;
+    border-radius: 4px; }
+
+.card-size {
+  width: 30%;
+  min-height: 400px; }
+  .card-size .error-msg {
+    color: red;
+    font-weight: 500; }
+
+.bd-navbar {
+  min-height: 4rem;
+  background-color: #2979FF;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1); }
+  .bd-navbar .nav-item {
+    color: #fff;
+    margin: 0px 10px;
+    font-size: 18px; }
+    .bd-navbar .nav-item .login-image {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%; }
+
+.navbar-dark .navbar-brand {
+  word-spacing: 5px; }
+
+.home-container {
+  height: calc(100vh - 70px);
+  overflow: hidden; }
+  .home-container .side-nav .drag-items {
+    border: 2px solid #ececec;
+    height: 82vh; }
+    .home-container .side-nav .drag-items .draggable-header {
+      cursor: move;
+      border: 2px dotted #dcdcdc;
+      text-align: center;
+      padding: 6px;
+      display: inline-block;
+      width: 100%;
+      margin: 5px 0px; }
+      .home-container .side-nav .drag-items .draggable-header :hover {
+        background-color: #ececec; }
+      .home-container .side-nav .drag-items .draggable-header p {
+        margin-bottom: 0px !important; }
+      .home-container .side-nav .drag-items .draggable-header .contentEditButton {
+        visibility: hidden; }
+  .home-container .btn-position {
+    position: absolute;
+    right: 30px;
+    top: 8px; }
+  .home-container .action-container .drop-body {
+    border: 2px solid #ececec;
+    height: 100vh; }
+  .home-container .action-container #action {
+    position: relative;
+    padding: 30px;
+    height: 100vh;
+    overflow-y: auto;
+    display: block; }
+    .home-container .action-container #action .droped-item:hover {
+      border: 2px dotted #ccc; }
+      .home-container .action-container #action .droped-item:hover .disableInCodePrint {
+        display: block !important; }
+      .home-container .action-container #action .droped-item:hover .contentEditButton {
+        line-height: 12px;
+        cursor: pointer; }
+    .home-container .action-container #action .disableInCodePrint {
+      display: none;
+      position: absolute;
+      right: 10px;
+      bottom: 5px; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif; }
+
+.main-container {
+  height: 100%;
+  width: 100%; }

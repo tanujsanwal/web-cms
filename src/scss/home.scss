@@ -1,0 +1,83 @@
+.bd-navbar{
+	min-height: 4rem;
+    background-color: #2979FF;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    .nav-item{
+	    color: #fff;
+    	margin: 0px 10px;
+    	font-size: 18px;
+    	.login-image{
+	    	height:32px;
+	    	width:32px;
+	    	border-radius:50%;
+    	}
+    }
+}
+.navbar-dark {
+	 .navbar-brand{
+	     word-spacing: 5px;
+	 }
+}
+.home-container{
+	height:calc(100vh - 70px);
+	overflow:hidden;
+	.side-nav{
+		.drag-items{
+		    border: 2px solid #ececec;
+		    height: 82vh;
+		    	.draggable-header{
+		    		cursor: move;
+				    border: 2px dotted #dcdcdc;
+				    text-align: center;
+				    padding: 6px;
+				    display: inline-block;
+				    width: 100%;
+				    margin: 5px 0px;
+					    :hover {
+					    background-color: #ececec;
+					    }
+				    	p{
+				    		margin-bottom: 0px !important;
+				    	}
+					    .contentEditButton{
+					    	visibility:hidden;
+					    }
+				}
+		}
+	}
+	.btn-position{
+		position: absolute;
+		right: 30px;
+		top: 8px;
+	}
+	.action-container{
+		.drop-body{
+			border: 2px solid #ececec;
+			height: 100vh;
+		}
+		#action{
+			position:relative;
+			padding:30px; 
+			height: 100vh;
+			overflow-y:auto;
+			display:block;
+			.droped-item:hover{
+				border:2px dotted #ccc;
+				.disableInCodePrint{
+					display:block !important;
+				}
+				.contentEditButton{
+					line-height:12px;
+					cursor:pointer;
+				}
+			}
+			.disableInCodePrint{
+				display: none;
+				position: absolute;
+			    right: 10px;
+			    bottom: 5px;
+			   
+			}
+		}
+	}
+}

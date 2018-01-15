@@ -1,0 +1,50 @@
+<!-- Login section  -->
+<div class="container-fluid p-5 bg-img">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card card-size my-auto card-bg-color">
+            <div class="card-body ">
+                <div class="row m-0 p-3 ">
+                    <!-- Form for sign in -->
+                    <form class="col-12" name="loginform" ng-submit="loginFn()">
+                        <div class="d-flex justify-content-center w-100 my-2">
+                            <h5 class="text-uppercase">LogIn to tanzo.io</h5>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group">
+                            <label for="emailId ">
+                                Email
+                            </label>
+                            <input type="email" class="form-control " id="emailId" name="email" ng-model="user.email"  placeholder="Enter email" required>
+                            <small class="error-msg" ng-show="loginform.email.$touched && loginform.email.$error.email">    Please enter valid email.
+                            </small>
+                        </div>
+                        <!-- password -->
+                        <div class="form-group">
+                            <label for="passwordId">
+                                Password
+                            </label>
+                            <input type="password" class="form-control" id="passwordId" name="password" ng-model="user.password" placeholder="Password " required>
+                            <small class="error-msg" ng-show="loginform.password.$touched && loginform.password.$invalid">
+                                Password is required.
+                            </small>
+                        </div>
+                        <!-- sign in button -->
+                        <button type="submit" class="btn btn-primary float-right w-100 text-uppercase form-group " ng-disabled="loginform.password.$invalid ||loginform.email.$invalid || loginform.email.$error.email">
+                            Log In
+                        </button>
+                        <div class="d-flex justify-content-center w-100 my-2" ng-show="errorMsg">
+                            <span class="error-msg">{{errorMsg}}</span>
+                        </div>
+                        <div class="d-flex w-100 text-center">
+                         <b> Dont have an account -
+                            <a ui-sref="signup" class="w-100">
+                                Singup Here
+                            </a>
+                         </b>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

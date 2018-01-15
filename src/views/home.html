@@ -1,0 +1,67 @@
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <div class="navbar-brand text-uppercase">Build your own website using tanzo.io</div>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button type="button" class="btn btn-sm btn-light" ng-click="logout()">Logout</button>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="row home-container m-0 pt-2">
+	<div class="side-nav col-2">
+		<div class="col-12 header text-center py-2">
+			<h4 class="w-100 text-center text-uppercase">Drag Items</h4>
+		</div>
+		<div class="col-12 item-list py-2 drag-items">
+			 <div class="draggable-header"  data-type="link">
+        <p>Add Link</p>
+      </div>
+      <div class="draggable-header"  data-type="paragraph">
+        <p>Paragraph</p>
+      </div>
+      <div class="draggable-header"  data-type="image">
+        <img src="http://asvs.in/wp-content/uploads/2017/08/dummy.png" width="100%" height="50%">
+      </div>
+      <div class="draggable-header" data-type="header1">
+				Heading 1 <br/>
+        <h1>Hello</h1>
+			</div>
+       <div class="draggable-header" data-type="header2">
+        Heading 2
+        <h2>world</h2>
+      </div>
+      <div class="draggable-header" data-type="header3">
+        Heading 3
+        <h3>Tanuj!!</h3>
+      </div>
+		</div>
+	</div>
+	<div class="action-container col-10">
+		<div class="row col-12 text-center py-2">
+			<h4 class="w-100 text-center text-uppercase">Drop below</h4>
+			<button class="btn btn-sm btn-primary btn-position" ng-click="showHtmlCode()">Show HTML</button>
+		</div>
+		<div id="action-code" class="col-12 drop-body">
+			<div id="action"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="getCodeModal" tabindex="-1" role="dialog" aria-labelledby="getCodeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Code for the Design</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <textarea id="code" class="form-control" rows="10">{{createCode}} </textarea>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
